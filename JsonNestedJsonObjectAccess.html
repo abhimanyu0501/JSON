@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<p>How to access nested JSON objects.</p>
+    <p id="demo"></p>
+<script>
+    var x="";
+    var myObj = {
+        "name": "John",
+        "age": 30,
+        "cars": {
+            "car1": "Ford",
+            "car2": "BMW",
+            "car3":"Fiat"
+        }
+    }
+
+    //document.getElementById("demo").innerHTML += myObj.cars.car2 + "<br>";
+    //or
+    //document.getElementById("demo").innerHTML += myObj.cars["car2"];
+
+    //myObj.cars.car2 = "Mercedes";
+    myObj.cars["car2"] = "Mercedes";
+    //Use the delete keyword to delete properties from a JSON object.
+    delete myObj.cars.car2;
+    for(i in myObj.cars)
+    {
+        x += myObj.cars[i] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>

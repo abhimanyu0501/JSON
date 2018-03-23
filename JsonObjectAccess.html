@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<p>Access a JSON object using dot notation:</p>
+<p id="demo"></p>
+<script>
+    var myObj, x;
+    myObj = { "name": "John", "age": 30, "car": null };
+    //x = myObj.name;
+    //x = myObj["name"];
+    //document.getElementById("demo").innerHTML = x;
+
+    //looping an onject
+    //You can loop through object properties by using the for-in loop:
+    for(x in myObj)
+    {
+        document.getElementById("demo").innerHTML += x+"<br>";
+    }
+    //In a for-in loop, use the bracket notation to access the property values:
+    for(x in myObj)
+    {
+        document.getElementById("demo").innerHTML += myObj[x]+"<br>";
+    }
+
+</script>
+</body>
+</html>
